@@ -1,5 +1,5 @@
 {
-  "name": "certslist-api",
+  "name": "countries-api",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -17,12 +17,10 @@
     "express-csp-header": "^5.1.0",
     "json-stringify": "^1.0.0",
     "mongoose": "^6.3.5",
-    "prettier": "^2.6.2",
-    "serve-favicon": "^2.5.0",
-    "slugify": "^1.6.5",
-    "validator": "^13.7.0"
+    "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "prettier": "^2.8.7"
   }
 }
