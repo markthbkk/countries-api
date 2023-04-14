@@ -44,11 +44,43 @@ exports.getAllCountriesByRegion = async (req, res) => {
   }
 };
 
+exports.getDistinctRegions = async (req, res) => {
+  console.log('Getting Requested Countries by Region');
+  console.log(req.params.id);
+  try {
+    const Regions = await country.distinct("Region");
+
+    res.status(200).send(Regions);
+  } catch (err) {
+    res.status(404).json({
+      status: 'fail',
+      message: err,
+    });
+  }
+};
+
+
 exports.getAllCountriesBySubRegion = async (req, res) => {
   console.log('Getting Requested Countries by SubRegion');
   console.log(req.params.id);
   try {
     const CountriesSub = await country.find({ Subregion: req.params.id });
+
+    res.status(200).send(CountriesSub);
+  } catch (err) {
+    res.status(404).json({
+      status: 'fail',
+      message: err,
+    });
+  }
+};
+
+
+exports.getSubRegionsInRegion = async (req, res) => {
+  console.log('Getting Requested Countries by SubRegion');
+  console.log(req.params.id);
+  try {
+    const CountriesSub = await country.distinct("Subregion", { Region: req.params.id });
 
     res.status(200).send(CountriesSub);
   } catch (err) {

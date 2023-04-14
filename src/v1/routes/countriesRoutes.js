@@ -12,7 +12,16 @@ router
   .get(countriesController.getAllCountriesByRegion);
 
 router
+  .route('/api/v1/countries/regions')
+  .get(countriesController.getDistinctRegions);
+
+router
   .route('/api/v1/countries/subregion/:id')
   .get(countriesController.getAllCountriesBySubRegion);
+
+
+  router
+    .route('/api/v1/countries/subregions/:id')
+    .get(countriesController.getSubRegionsInRegion);
 
 module.exports = router;
