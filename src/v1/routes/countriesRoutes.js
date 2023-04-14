@@ -12,7 +12,7 @@ router
   .get(countriesController.getAllCountriesByRegion);
 
 router
-  .route('/api/v1/countries/regions')
+  .route('/api/v1/countries/regions/distinct')
   .get(countriesController.getDistinctRegions);
 
 router
