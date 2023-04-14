@@ -77,7 +77,7 @@ exports.getAllCountriesBySubRegion = async (req, res) => {
 
 
 exports.getSubRegionsInRegion = async (req, res) => {
-  console.log('Getting Requested Countries by SubRegion');
+  console.log('Getting Requested SubRegions in Region');
   console.log(req.params.id);
   try {
     const CountriesSub = await country.distinct("Subregion", { Region: req.params.id });
