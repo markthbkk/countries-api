@@ -45,8 +45,8 @@ exports.getAllCountriesByRegion = async (req, res) => {
 };
 
 exports.getDistinctRegions = async (req, res) => {
-  console.log('Getting Requested Countries by Region');
-  console.log(req.params.id);
+  console.log('Getting Distinct Regions');
+ 
   try {
     const Regions = await country.distinct("Region");
 
