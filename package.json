@@ -7,6 +7,9 @@
     "start": "node server.js",
     "start:prod": "NODE_ENV=production node server.js"
   },
+  "engines": {
+    "node": "24.x"
+  },
   "keywords": [],
   "author": "Mark Thomas",
   "license": "MIT",
